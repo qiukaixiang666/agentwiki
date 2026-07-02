@@ -1,0 +1,45 @@
+# Local secrets
+.env
+*.key
+*.pem
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime outputs and local memory banks
+data/
+runtime/
+result/
+recall/results/
+recall/*/*.recall.json
+recall/*/*.recall.md
+recall/summary.*
+
+# Demo generated artifacts
+memory_feature_demos/memory_banks/*/data/
+memory_feature_demos/memory_banks/*/runtime/
+memory_feature_demos/run_logs/
+memory_feature_demos/reports/
+
+# Local model/cache directories
+bge-m3/
+LongMemEval/.cache/
+
+# Dataset files and downloaded mirrors
+LongMemEval/*.json
+LongMemEval/*.jsonl
+LongMemEval/*.parquet
+LongMemEval/*.arrow
+LongMemEval/*.zip
+LongMemEval/*.tar
+LongMemEval/*.tar.gz
+LongMemEval/README.md.1
+LongMemEval/.gitattributes.1
+
+# Temporary files
+*.tmp
+*.log

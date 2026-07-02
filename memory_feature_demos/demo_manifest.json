@@ -1,0 +1,50 @@
+{
+  "module": "memory_feature_demos",
+  "description": "Four independent demo prompt sets for visually checking memory-system behavior. Assistant replies are intentionally omitted.",
+  "demos": [
+    {
+      "id": "basic_recall",
+      "title": "基础写入与召回",
+      "memory_root": "memory_feature_demos/memory_banks/basic_recall",
+      "prompt_file": "memory_feature_demos/prompts/basic_recall.jsonl",
+      "turns": 15,
+      "build_turns": 12,
+      "probe_turns": 3,
+      "default_api_port": 18241,
+      "main_observation": "wiki.jsonl should contain concrete dinner-party recommendations and probe answers should recall them."
+    },
+    {
+      "id": "conflict_update",
+      "title": "冲突更新",
+      "memory_root": "memory_feature_demos/memory_banks/conflict_update",
+      "prompt_file": "memory_feature_demos/prompts/conflict_update.jsonl",
+      "turns": 15,
+      "build_turns": 12,
+      "probe_turns": 3,
+      "default_api_port": 18242,
+      "main_observation": "newer preference memories should replace contradictory older memories instead of leaving both active."
+    },
+    {
+      "id": "privacy_filtering",
+      "title": "隐私过滤",
+      "memory_root": "memory_feature_demos/memory_banks/privacy_filtering",
+      "prompt_file": "memory_feature_demos/prompts/privacy_filtering.jsonl",
+      "turns": 15,
+      "build_turns": 12,
+      "probe_turns": 3,
+      "default_api_port": 18243,
+      "main_observation": "fake sensitive spans should not be stored, but harmless preferences and project goals should remain."
+    },
+    {
+      "id": "user_card",
+      "title": "User Card 用户画像",
+      "memory_root": "memory_feature_demos/memory_banks/user_card",
+      "prompt_file": "memory_feature_demos/prompts/user_card.jsonl",
+      "turns": 15,
+      "build_turns": 12,
+      "probe_turns": 3,
+      "default_api_port": 18244,
+      "main_observation": "stable preferences should appear in user_card.json after refresh and influence probe answers."
+    }
+  ]
+}
